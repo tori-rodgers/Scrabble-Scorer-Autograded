@@ -1,5 +1,3 @@
-// This assignment is inspired by a problem on Exercism (https://exercism.org/tracks/javascript/exercises/etl) that demonstrates Extract-Transform-Load using Scrabble's scoring system. 
-
 const input = require("readline-sync");
 
 const oldPointStructure = {
@@ -25,13 +23,9 @@ function oldScrabbleScorer(word) {
 	return letterPoints;
  };
 
-// your job is to finish writing these functions and variables that we've named //
-// don't change the names or your program won't work as expected. //
 
 function initialPrompt() {
    console.log("Let's play some Scrabble!\n");
-   //let score = oldScrabbleScorer(userWord);
-   //console.log(score);
 };
 
 function simpleScorer(userWord) {
@@ -92,17 +86,17 @@ let simple = {
      name: 'Simple Score',
      description: 'Each letter is worth 1 point.',
      scorerFunction: simpleScorer
-};
+   };
 let bonusVowels = {
      name: 'Bonus Vowels',
      description: 'A function that returns a score based on the number of vowels and consonants.',
      scorerFunction: vowelBonusScorer
-};
+   };
 let scrabbleRules = {
      name: 'Scrabble',
      description: 'The traditional scoring algorithm.',
      scorerFunction: scrabbleScorer
-};
+   };
 
 let scoringAlgorithms = [simple, bonusVowels, scrabbleRules];
  
@@ -112,7 +106,7 @@ function scorerPrompt() {
       scoringAlgorithms[0],
       scoringAlgorithms[1], 
       scoringAlgorithms[2]
-   ];
+      ];
 
    console.log('Which scoring algorithm would you like to use?\n');
    console.log('0 - Simple: one point per character');
@@ -142,7 +136,6 @@ function runProgram() {
 
 
 // Don't write any code below this line //
-// And don't change these or your program will not run as expected //
 module.exports = {
    initialPrompt: initialPrompt,
    transform: transform,
